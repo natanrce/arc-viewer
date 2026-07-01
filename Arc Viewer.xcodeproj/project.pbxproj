@@ -6,14 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C0DE000000000000000000A3 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = C0DE000000000000000000A2 /* GRDB */; };
+		D0D0D0D0D0D0D0D0D0D00002 /* libzstd.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = D0D0D0D0D0D0D0D0D0D00001 /* libzstd.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0D0D0D0D0D0D0D0D0D00003 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D0D0D0D0D0D0D0D0D0D00002 /* libzstd.1.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		91AE2CAC2FF444C50047C205 /* Arc Cache Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arc Cache Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91AE2CAC2FF444C50047C205 /* Arc Viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arc Viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D0D0D0D0D0D0D0D0D00001 /* libzstd.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libzstd.1.dylib; path = Vendor/libzstd.1.dylib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		91AE2CAE2FF444C50047C205 /* Arc Cache Viewer */ = {
+		91AE2CAE2FF444C50047C205 /* Arc Viewer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Arc Cache Viewer";
+			path = "Arc Viewer";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0DE000000000000000000A3 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,7 +53,8 @@
 		91AE2CA32FF444C50047C205 = {
 			isa = PBXGroup;
 			children = (
-				91AE2CAE2FF444C50047C205 /* Arc Cache Viewer */,
+				91AE2CAE2FF444C50047C205 /* Arc Viewer */,
+				D0D0D0D0D0D0D0D0D0D00004 /* Vendor */,
 				91AE2CAD2FF444C50047C205 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -40,34 +62,44 @@
 		91AE2CAD2FF444C50047C205 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91AE2CAC2FF444C50047C205 /* Arc Cache Viewer.app */,
+				91AE2CAC2FF444C50047C205 /* Arc Viewer.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D0D0D0D0D0D0D0D0D0D00004 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				D0D0D0D0D0D0D0D0D0D00001 /* libzstd.1.dylib */,
+			);
+			name = Vendor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		91AE2CAB2FF444C50047C205 /* Arc Cache Viewer */ = {
+		91AE2CAB2FF444C50047C205 /* Arc Viewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 91AE2CB72FF444C60047C205 /* Build configuration list for PBXNativeTarget "Arc Cache Viewer" */;
+			buildConfigurationList = 91AE2CB72FF444C60047C205 /* Build configuration list for PBXNativeTarget "Arc Viewer" */;
 			buildPhases = (
 				91AE2CA82FF444C50047C205 /* Sources */,
 				91AE2CA92FF444C50047C205 /* Frameworks */,
 				91AE2CAA2FF444C50047C205 /* Resources */,
+				D0D0D0D0D0D0D0D0D0D00003 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				91AE2CAE2FF444C50047C205 /* Arc Cache Viewer */,
+				91AE2CAE2FF444C50047C205 /* Arc Viewer */,
 			);
-			name = "Arc Cache Viewer";
+			name = "Arc Viewer";
 			packageProductDependencies = (
+				C0DE000000000000000000A2 /* GRDB */,
 			);
 			productName = "Arc Cache Viewer";
-			productReference = 91AE2CAC2FF444C50047C205 /* Arc Cache Viewer.app */;
+			productReference = 91AE2CAC2FF444C50047C205 /* Arc Viewer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -85,21 +117,25 @@
 					};
 				};
 			};
-			buildConfigurationList = 91AE2CA72FF444C50047C205 /* Build configuration list for PBXProject "Arc Cache Viewer" */;
+			buildConfigurationList = 91AE2CA72FF444C50047C205 /* Build configuration list for PBXProject "Arc Viewer" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"pt-BR",
 			);
 			mainGroup = 91AE2CA32FF444C50047C205;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C0DE000000000000000000A1 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 91AE2CAD2FF444C50047C205 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				91AE2CAB2FF444C50047C205 /* Arc Cache Viewer */,
+				91AE2CAB2FF444C50047C205 /* Arc Viewer */,
 			);
 		};
 /* End PBXProject section */
@@ -250,15 +286,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XBG249M5TY;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Arc Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -282,15 +321,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XBG249M5TY;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Arc Viewer";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,7 +354,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		91AE2CA72FF444C50047C205 /* Build configuration list for PBXProject "Arc Cache Viewer" */ = {
+		91AE2CA72FF444C50047C205 /* Build configuration list for PBXProject "Arc Viewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91AE2CB52FF444C60047C205 /* Debug */,
@@ -321,7 +363,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		91AE2CB72FF444C60047C205 /* Build configuration list for PBXNativeTarget "Arc Cache Viewer" */ = {
+		91AE2CB72FF444C60047C205 /* Build configuration list for PBXNativeTarget "Arc Viewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				91AE2CB82FF444C60047C205 /* Debug */,
@@ -331,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C0DE000000000000000000A1 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C0DE000000000000000000A2 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0DE000000000000000000A1 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 91AE2CA42FF444C50047C205 /* Project object */;
 }
